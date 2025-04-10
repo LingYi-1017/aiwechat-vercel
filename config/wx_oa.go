@@ -18,7 +18,6 @@ const (
 
 	Wx_Command_Help   = "/help"
 	Wx_Command_Gpt    = "/gpt"
-	Wx_Command_Spark  = "/spark"
 	Wx_Command_Qwen   = "/qwen"
 	Wx_Command_Gemini = "/gemini"
 	Wx_Command_Prompt = "/prompt"
@@ -43,7 +42,7 @@ func GetWxSubscribeReply() string {
 func GetWxHelpReply() string {
 	helpMsg := os.Getenv(Wx_Help_Reply_key)
 	if helpMsg == "" {
-		helpMsg = "输入以下命令进行对话\n/help：查看帮助\n/gpt：与GPT对话\n/spark：与星火对话\n/qwen：与通义千问对话\n/gemini：与gemini对话\n" +
+		helpMsg = "输入以下命令进行对话\n/help：查看帮助\n/gpt：与GPT对话\n/qwen：与通义千问对话\n/gemini：与gemini对话\n" +
 			"/prompt 你的prompt: 设置system prompt"
 	}
 	return strings.ReplaceAll(helpMsg, "\\n", "\n")
