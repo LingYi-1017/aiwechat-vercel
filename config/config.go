@@ -18,7 +18,6 @@ const (
 	Bot_Type_Key    = "botType"
 	Bot_Type_Echo   = "echo"
 	Bot_Type_Gpt    = "gpt"
-	Bot_Type_Spark  = "spark"
 	Bot_Type_Qwen   = "qwen"
 	Bot_Type_Gemini = "gemini"
 )
@@ -56,7 +55,6 @@ func CheckAllBotConfig() (botType string, checkRes map[string]bool) {
 	checkRes = map[string]bool{
 		Bot_Type_Echo:   true,
 		Bot_Type_Gpt:    true,
-		Bot_Type_Spark:  true,
 		Bot_Type_Qwen:   true,
 		Bot_Type_Gemini: true,
 	}
